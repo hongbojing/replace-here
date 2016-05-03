@@ -1,5 +1,5 @@
 {
-  "name": "replace_this project",
+  "name": "replacethis",
   "main": "server.js",
   "devDependencies": {
     "gulp": "^3.9.1",
@@ -12,6 +12,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.0.2",
     "gulp-watch": "^3.0.0",
+    "gulp-webserver": "^0.9.1",
     "jshint": "^2.9.2",
     "jshint-stylish": "^1.0.0"
   },

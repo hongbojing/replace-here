@@ -8,6 +8,7 @@ var concat     = require('gulp-concat');
 var uglify     = require('gulp-uglify');
 var ngAnnotate = require('gulp-ng-annotate');
 var nodemon    = require('gulp-nodemon');
+// var webserver = require('gulp-webserver');
 
 // ********************
 // #1 Compiling LESS to CSS then minify it then rename the file
@@ -110,5 +111,20 @@ gulp.task('nodemon', function() {
     });
 });
 
+// ********************
+// #7 Using this file to reload the page automatically
+// >>> npm install gulp-webserver --save-dev
+// ********************
+// xxxxx seems that there are conflicts with nodemon and webserver
+// gulp.task('webserver', function() {
+//   gulp.src('public/app/views/')
+//       .pipe(webserver({
+//         livereload: true,
+//         port: 8080,
+//         open: true
+//       }));
+// });
+
 // the default task is the task that Gulp automatically looks for at first
+// gulp.task('default', ['nodemon', 'webserver']);
 gulp.task('default', ['nodemon']);
