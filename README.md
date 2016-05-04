@@ -30,5 +30,9 @@ TODO_Write_usage_instructions
 1. [Hongbo Jing](https://github.com/hongbojing)
 2. name_bb
 
+## Useful link
+1. [This saved the route setting](http://stackoverflow.com/questions/17199095/nodejs-equivalent-of-this-htaccess)
+2. ...
+
 ## License
 MIT license
