@@ -138,4 +138,4 @@ gulp.task('nodemon', function () {
 
 // the default task is the task that Gulp automatically looks for at first
 // gulp.task('default', ['nodemon', 'webserver']);
-gulp.task('default', ['angular', 'js', 'nodemon']);
+gulp.task('default', ['watch', 'nodemon']);
