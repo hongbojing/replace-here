@@ -10,7 +10,7 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "public/assets/libs",
+    "public/ext/libs",
     "test",
     "tests"
   ],

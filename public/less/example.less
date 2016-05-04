@@ -1,0 +1,43 @@
+/* this file is used for all app specific styling for a particular route */
+
+#exampleContainer {
+    // styles here
+
+    // nested styling inside container
+    .example-class {
+
+    }
+}
+
+/* MEDIA QUERIES AT BOTTOM OF FILE */
+/* some common media query sizes, not all need to be used */
+@media (max-width: 1375px) {
+    /* specificity matters! make sure you use the same nesting
+        when attempting to overwrite styles with media queries */
+    #exampleContainer {
+        .example-class {
+            // overwriting style of class from above at 1375px
+        }
+    }
+}
+
+@media (max-width: 1156px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 667px) {
+
+}
+
+@media (max-width: 465px) {
+
+
+}
+
+@media (max-width: 375px) {
+
+}

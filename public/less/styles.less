@@ -1,0 +1,84 @@
+@import "example"; // loads app-specific less file i.e. appname.less
+
+/* the styling in this next section is default app level styles
+that apply to main tags (html, body, #main) and includes ng-cloak */
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+
+    font-family: Roboto, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+
+    background-color: grey;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#menu {
+    display: none;
+}
+
+#main {
+    padding: 50px 0 80px 0;
+    overflow: auto;
+    font-size: 14px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+/* the styling below is an example of generic top level styles that are
+somewhat app-specific and can be applied to any part of the app,
+i.e. bolding and centering, etc. */
+
+.clear {
+    clear: both;
+}
+
+.text-success {
+    color: green;
+    vertical-align: text-bottom !important;
+}
+
+.text-error {
+    color: red;
+    vertical-align: text-bottom !important;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+#ufLightboxContents {
+    .btn {
+        text-align: center;
+    }
+}
+
+.btn {
+    width: inherit;
+    height: inherit;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 6px 12px;
+    text-align: left;
+}
+
+.btn:active, .btn.active {
+    box-shadow: none;
+}
+
+.btn:focus, .btn:active, .btn.focus, .btn.active {
+    outline: none;
+}
