@@ -18,7 +18,7 @@ var nodemon = require('gulp-nodemon');
 // define a task called 'css', you can run 'gulp css' to launch this task
 gulp.task('css', function () {
     // grab the less file, process the LESS, save to style.css
-    return gulp.src(['public/less/styles.less'])
+    return gulp.src(['public/ext/libs/bootstrap/less/bootstrap.less', 'public/less/styles.less'])
         .pipe(less())
         .pipe(minifyCSS())
         .pipe(concat('main.css'))
@@ -32,25 +32,26 @@ gulp.task('css', function () {
 // ********************
 // task for linting js files, you can run 'gulp js' to launch this task
 gulp.task('js', function () {
-    return gulp.src(['server.js', 'public/js/*.js', 'public/js/**/*.js'])
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'));
+    return gulp.src(['public/ext/libs/*/*.min.js'])
+        .pipe(concat('everything.js'))
+        .pipe(gulp.dest('public/js'));
 });
 
 // ********************
 // #3 Minifying, and Concatenating JS code
 // >>> npm install gulp-uglify gulp-concat --save-dev
+// NOT NOT NOT in use in this project
 // ********************
 // task to lint, minify, and concat frontend files, you can run 'gulp scripts' to launch this task
-gulp.task('scripts', function () {
-    return gulp.src(['public/js/*.js', 'public/js/**/*.js'])
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'))
-        .pipe(concat('everything.js'))
-        .pipe(uglify())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('public/js'));
-});
+// gulp.task('scripts', function () {
+//     return gulp.src(['public/js/*.js', 'public/js/**/*.js'])
+//         .pipe(jshint())
+//         .pipe(jshint.reporter('default'))
+//         .pipe(concat('everything.js'))
+//         .pipe(uglify())
+//         .pipe(rename({suffix: '.min'}))
+//         .pipe(gulp.dest('public/js'));
+// });
 
 // ********************
 // #4 Minifying AngularJS
@@ -73,10 +74,8 @@ gulp.task('scripts', function () {
 // task to lint, minify, and concat frontend angular files, you can run 'gulp angular' to launch this task
 gulp.task('angular', function () {
     return gulp.src(['public/js/*.js', 'public/js/**/*.js'])
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'))
         .pipe(ngAnnotate())
-        .pipe(concat('everything.js'))
+        .pipe(concat('app.js'))
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('public/js'));
@@ -130,4 +129,4 @@ gulp.task('nodemon', function () {
 
 // the default task is the task that Gulp automatically looks for at first
 // gulp.task('default', ['nodemon', 'webserver']);
-gulp.task('default', ['nodemon']);
+gulp.task('default', ['nodemon', 'watch', 'angular', 'js']);
