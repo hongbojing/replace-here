@@ -32,7 +32,7 @@ TODO_Write_usage_instructions
 
 ## Useful link
 1. [This saved the route setting](http://stackoverflow.com/questions/17199095/nodejs-equivalent-of-this-htaccess)
-2. ...
+2. [Update lib version using bower](http://www.hongkiat.com/blog/bower-package-manager/)
 
 ## License
 MIT license
