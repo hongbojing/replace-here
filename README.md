@@ -20,7 +20,7 @@ Go to this [link](http://www.emoji-cheat-sheet.com/) to add **EMOJI**
     * Install the task runner globally so that we have access to it across our project.
 5. **npm install gulp --save-dev**
     * Also we need to install gulp in our project dependencies
-6. **gulp**
+6. **gulp(need to be changed here)**
     * Since I already have all the gulp plugins I need in the *package.json* file, and I have run the **npm install** to install all of them. I don't need to install seperately anymore.
     * All the tasks are defined in the *gulpfile.js* file, you can find more information in its comment
 
@@ -29,6 +29,10 @@ TODO_Write_usage_instructions
 ## Contributing
 1. [Hongbo Jing](https://github.com/hongbojing)
 2. name_bb
+
+## Useful link
+1. [This saved the route setting](http://stackoverflow.com/questions/17199095/nodejs-equivalent-of-this-htaccess)
+2. [Update lib version using bower](http://www.hongkiat.com/blog/bower-package-manager/)
 
 ## License
 MIT license
