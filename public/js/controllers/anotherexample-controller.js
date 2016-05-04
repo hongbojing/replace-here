@@ -10,12 +10,12 @@
 
 angular
     .module('myApp')
-    .controller('RouteController', RouteController);
+    .controller('AnotherexampleController', AnotherexampleController);
 
 /* dependency injection to ensure valid minified code */
-RouteController.$inject = ['fooData'];
+AnotherexampleController.$inject = ['fooData'];
 
-function RouteController(fooData) {
+function AnotherexampleController(fooData) {
     /* jshint validthis: true */
     var vm = this;
 

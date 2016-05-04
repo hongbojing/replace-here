@@ -15,23 +15,25 @@
     <!--<script src="/ext/libs/angular/angular.min.js"></script>-->
     <!--<script src="/ext/libs/angular-animate/angular-animate.min.js"></script>-->
     <!--<script src="/ext/libs/angular-route/angular-route.min.js"></script>-->
+	<script src="js/everything.js"></script>
 
     <!-- APP -->
-    <script src="js/everything.js"></script>
-    <!--<script src="js/app.min.js"></script>-->
-    <script src="js/index.js"></script>
-    <script src="js/controllers/directive-controller.js"></script>
-    <script src="js/controllers/example-controller.js"></script>
-    <script src="js/controllers/main-controller.js"></script>
-    <script src="js/controllers/route-controller.js"></script>
-    <script src="js/directives/example-directives.js"></script>
-    <script src="js/filters/example-filter.js"></script>
-    <script src="js/services/data-services.js"></script>
+    <script src="js/app.min.js"></script>
+    <!--<script src="js/index.js"></script>-->
+    <!--<script src="js/controllers/directive-controller.js"></script>-->
+    <!--<script src="js/controllers/example-controller.js"></script>-->
+    <!--<script src="js/controllers/main-controller.js"></script>-->
+    <!--<script src="js/controllers/anotherexample-controller.js"></script>-->
+    <!--<script src="js/directives/example-directives.js"></script>-->
+    <!--<script src="js/filters/example-filter.js"></script>-->
+    <!--<script src="js/services/data-services.js"></script>-->
 </head>
 <body class="container" ng-app="myApp" ng-controller="MainController as mainCtrl">
 
 <div class="jumbotron text-center">
     <h1>{{ mainCtrl.message }}</h1>
+	<p><a href="/" class="btn btn-primary">Example</a></p>
+	<p><a href="/anotherexample" class="btn btn-primary">Another example</a></p>
 </div>
 
 <div ng-view></div>

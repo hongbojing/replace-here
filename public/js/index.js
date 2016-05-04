@@ -16,14 +16,14 @@ function config($routeProvider, $locationProvider) {
 
     $routeProvider
         .when('/', {
-            templateUrl: 'partials/examples.html', // file name = name of app
+            templateUrl: 'partials/example.html', // file name = name of app
             controller: 'ExampleController', // controller ProudCamelCase and long (Controller)
             controllerAs: 'exampleCtrl' // controllerAs camelCase and short (Ctrl)
         })
         .when('/anotherexample', {
             templateUrl: 'partials/anotherexample.html',
-            controller: 'RouteController', // controller ProudCamelCase and long (Controller)
-            controllerAs: 'routeCtrl' // controllerAs camelCase and short (Ctrl)
+            controller: 'AnotherexampleController', // controller ProudCamelCase and long (Controller)
+            controllerAs: 'anotherCtrl' // controllerAs camelCase and short (Ctrl)
         })
         .otherwise({
             redirectTo: '/'

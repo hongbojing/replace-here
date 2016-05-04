@@ -32,7 +32,11 @@ gulp.task('css', function () {
 // ********************
 // task for linting js files, you can run 'gulp js' to launch this task
 gulp.task('js', function () {
-    return gulp.src(['public/ext/libs/*/*.min.js'])
+    return gulp.src(['public/ext/libs/jquery/dist/jquery.min.js',
+                     'public/ext/libs/bootstrap/dist/js/bootstrap.min.js',
+                     'public/ext/libs/angular/angular.min.js',
+                     'public/ext/libs/angular-animate/angular-animate.min.js',
+                     'public/ext/libs/angular-route/angular-route.min.js'])
         .pipe(concat('everything.js'))
         .pipe(gulp.dest('public/js'));
 });
@@ -73,7 +77,12 @@ gulp.task('js', function () {
 // ********************
 // task to lint, minify, and concat frontend angular files, you can run 'gulp angular' to launch this task
 gulp.task('angular', function () {
-    return gulp.src(['public/js/*.js', 'public/js/**/*.js'])
+    return gulp.src(['public/js/index.js',
+                     'public/js/controllers/*.js',
+                     'public/js/directives/*.js',
+                     'public/js/filters/*.js',
+                     'public/js/services/*.js'
+    ])
         .pipe(ngAnnotate())
         .pipe(concat('app.js'))
         .pipe(uglify())
@@ -129,4 +138,4 @@ gulp.task('nodemon', function () {
 
 // the default task is the task that Gulp automatically looks for at first
 // gulp.task('default', ['nodemon', 'webserver']);
-gulp.task('default', ['nodemon', 'watch', 'angular', 'js']);
+gulp.task('default', ['angular', 'js', 'nodemon']);
